@@ -1,14 +1,14 @@
 {
   "name": "asset-collector",
   "description": "A tool to collect assets",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
     "name": "Christian Zindel"
   },
   "main": "lib/asset-collector.js",
   "repository": "git://github.com/czindel/asset-collector",
   "dependencies": {
-    "underscore": "1.4.4",
-    "async": "0.2.7"
+    "underscore": "1.6.0",
+    "async": "0.2.10"
   }
 }
