@@ -1,7 +1,7 @@
 {
   "name": "asset-collector",
   "description": "A tool to collect assets",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": {
     "name": "Christian Zindel"
   },
