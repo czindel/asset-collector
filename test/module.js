@@ -1,15 +1,25 @@
-var collections = require('./util/collections');
 var utils = require('./util/utils');
-
 var assert = require("assert");
 
+
+var collection = {
+	"type" : "less",
+		"locations" : {
+		"module/" : {
+			"pattern" : "module",
+				// only include/exclude for complete module is possible
+				"exclude": ["brand_2"],
+				"include": ["brand_1"]
+		}
+	}
+};
 
 describe('brand_1', function(){
 	describe('no tags', function(){
 		var result;
 
 		before(function (done) {
-			utils.testCollection(collections['module.css'], 'brand_1', [], function (list) {
+			utils.testCollection(collection, 'brand_1', [], function (list) {
 				result = list;
 				done();
 			})
@@ -29,7 +39,7 @@ describe('brand_1', function(){
 		var result;
 
 		before(function (done) {
-			utils.testCollection(collections['module.css'], 'brand_1', ['x'], function (list) {
+			utils.testCollection(collection, 'brand_1', ['x'], function (list) {
 				result = list;
 				done();
 			})
@@ -49,7 +59,7 @@ describe('brand_1', function(){
 		var result;
 
 		before(function (done) {
-			utils.testCollection(collections['module.css'], 'brand_1', ['x', 'y'], function (list) {
+			utils.testCollection(collection, 'brand_1', ['x', 'y'], function (list) {
 				result = list;
 				done();
 			})
@@ -70,7 +80,7 @@ describe('brand_2', function(){
 		var result;
 
 		before(function (done) {
-			utils.testCollection(collections['module.css'], 'brand_2', [], function (list) {
+			utils.testCollection(collection, 'brand_2', [], function (list) {
 				result = list;
 				done();
 			})
@@ -88,7 +98,7 @@ describe('brand_3', function(){
 		var result;
 
 		before(function (done) {
-			utils.testCollection(collections['module.css'], 'brand_3', [], function (list) {
+			utils.testCollection(collection, 'brand_3', [], function (list) {
 				result = list;
 				done();
 			})
