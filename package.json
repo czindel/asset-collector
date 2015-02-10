@@ -1,11 +1,11 @@
 {
   "name": "asset-collector",
   "description": "A tool to collect assets",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "author": {
     "name": "Christian Zindel"
   },
-  "main": "lib/asset-collector.js",
+  "main": "index.js",
   "repository": "git://github.com/czindel/asset-collector",
   "dependencies": {
     "lodash": "2.4.1",
