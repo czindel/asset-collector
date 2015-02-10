@@ -1,0 +1,24 @@
+{
+  "name": "essentials_dummy",
+  "version": "0.0.0",
+  "authors": [
+    "Zindel, Christian (FRA-MRM) <Christian.Zindel@mrmworldwide.com>"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "slick.js": "1.4.1",
+    "jquery-cookie": "1.4.1",
+    "bootstrap": "3.3.2"
+  }
+}

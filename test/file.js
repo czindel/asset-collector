@@ -5,8 +5,8 @@ var assert = require("assert");
 var collection = {
 	"type" : "less",
 		"locations" : {
-		"module/" : {
-			"pattern" : "module",
+		"file/a.less" : {
+			"pattern" : "file",
 				// only include/exclude for complete module is possible
 				"exclude": ["brand_2"],
 				"include": ["brand_1"]
@@ -14,7 +14,7 @@ var collection = {
 	}
 };
 
-describe('module', function () {
+describe('file', function () {
 	describe('brand_1', function(){
 		describe('no tags', function(){
 			var result;
@@ -28,9 +28,7 @@ describe('module', function () {
 
 			it('should contain files without tag', function(){
 				var expected = [
-					'/module/brands/brand_1/less/a.less',
-					'/module/less/c.less',
-					'/module/brands/brand_1/less/b.less'
+					'/file/a.less'
 				];
 				assert.deepEqual(result, expected);
 			})
@@ -46,34 +44,12 @@ describe('module', function () {
 				})
 			});
 
-			it('should contain files with correct tag', function(){
-				var expected = [
-					'/module/brands/brand_1/less/a@x.less',
-					'/module/less/d@x.less',
-					'/module/brands/brand_1/less/e@x.less'
-				];
+			it('should be empty', function(){
+				var expected = [];
 				assert.deepEqual(result, expected);
 			})
 		});
 
-		describe('tag "x" and "y"', function(){
-			var result;
-
-			before(function (done) {
-				utils.testCollection(collection, 'brand_1', ['x', 'y'], function (list) {
-					result = list;
-					done();
-				})
-			});
-
-			it('should contain files with correct tag', function(){
-				var expected = [
-					'/module/less/g@x@y.less',
-					'/module/less/h@y@x.less'
-				];
-				assert.deepEqual(result, expected);
-			})
-		});
 	});
 
 	describe('brand_2', function(){
