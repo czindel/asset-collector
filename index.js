@@ -81,10 +81,10 @@ AssetCollector.prototype = {
 							callback([]);
 							break;
 						}
-						if (!this.hasValidFileEnd(assetFullPath, this.fileExtension)) {
-							callback([]);
-							break;
-						}
+//						if (!this.hasValidFileEnd(assetFullPath, this.fileExtension)) {
+//							callback([]);
+//							break;
+//						}
 						if (!this.isFileIncluded(assetFullPath, modifier)) {
 							callback([]);
 							break;
